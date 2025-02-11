@@ -22,10 +22,10 @@ class MyApp extends StatelessWidget {
             email: 'ayoubamine2a@gmail.com',
           ),
           onLoad: () {
-            print('Hello Tawk!');
+            debugPrint('Hello Tawk!');
           },
           onLinkTap: (String url) {
-            print(url);
+            debugPrint(url);
           },
           placeholder: const Center(
             child: Text('Loading...'),
