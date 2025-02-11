@@ -59,8 +59,12 @@ class _TawkState extends State<Tawk> {
         };
       ''';
     }
-
-    _controller.evaluateJavascript(source: javascriptString);
+    try {
+      var result = _controller.evaluateJavascript(source: javascriptString);
+      debugPrint("Result" + result.toString());
+    } catch (e) {
+      debugPrint(e.toString());
+    }
   }
 
   @override
@@ -129,5 +133,4 @@ class _TawkState extends State<Tawk> {
       ],
     );
   }
-
 }
