@@ -76,7 +76,7 @@ class _TawkState extends State<Tawk> {
   var Tawk_API = Tawk_API || {};
   Tawk_API.onLoad = function() {
     Tawk_API.login({
-      hash: $hash, // Required
+      hash: '$hash', // Required
       userId: '${user.id}',     // Required
       name: '${user.userName}',            // Optional
       phone: '${user.phone}'     // Optional
