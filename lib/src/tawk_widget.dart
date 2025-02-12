@@ -38,15 +38,7 @@ class Tawk extends StatefulWidget {
     this.placeholder,
     this.user,
     this.siteApiKey,
-  })  : assert(
-          ((user != null && siteApiKey == null) ||
-              (user == null && siteApiKey != null)||
-               (user != null && siteApiKey != null && visitor != null)
-              ),
-          'Either user and siteApiKey must be provided together, or visitor must be non-null or both must be null.',
-        ),
-       
-        super(key: key);
+  }) : super(key: key);
 
   @override
   _TawkState createState() => _TawkState();
