@@ -154,6 +154,10 @@ class _TawkState extends State<Tawk> {
     return Stack(
       children: [
         InAppWebView(
+          onReceivedServerTrustAuthRequest: (controller, challenge) async {
+            return ServerTrustAuthResponse(
+                action: ServerTrustAuthResponseAction.PROCEED);
+          },
           gestureRecognizers: {}..add(Factory<VerticalDragGestureRecognizer>(
               () => VerticalDragGestureRecognizer())),
           initialUrlRequest:
